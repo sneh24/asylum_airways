@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	
+ <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="https://www.ethiopianairlines.com/Cms_Data/Contents/EthiopianAirlines/Media/images/departure_start_.png" alt="ASYLUM AIRWAYS" width="40px" height="40px"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="Hackathon2.html"><span>HOME</span></a></li>
+            <li><a href="#" ><span>FAQ</span></a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="sign_up.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="log_in.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+  <div class="container-fluid">
+    <div class="row" id="search" >
+      <!-- Search -->
+      <div class="offset-lg-2 col-lg-8">
+        <div class="row jumbotron">
+          <div class="col-lg-3 ml-auto" >
+            <!-- <label for="from">Source</label> -->
+            <input type="text"  id="from" class="form-control form-control-lg" placeholder="Source" />
+          </div>
+          <div class="col-lg-3 ml-auto" >
+            <input type="text" id="to" class="form-control form-control-lg" placeholder="Destination" />
+          </div>
+          <div class="col-lg-4 ml-auto" >
+            <input type="date" name="date" class="form-control form-control-lg" id="date" />
+          </div>
+          <div class="col-lg-2 ml-auto" >
+            <button class="btn btn-primary btn-lg active" id="submit">Search Flight</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
