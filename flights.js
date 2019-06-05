@@ -16,6 +16,9 @@ mongoose.connect("mongodb+srv://Razr7:batman123@cluster0-g0pwk.mongodb.net/test?
 router.get('/',function(req,res){
     res.send("flights page").status(200);
 })
+
+
+
 router.post('/',function(req,res,next){
 
     const newFlight = new flightModel({
@@ -28,8 +31,18 @@ router.post('/',function(req,res,next){
         seats : req.body.seats,
         company : req.body.company
     });
-    res.send("Info recieved").status(200);
-    newFlight.save();
+    flightModel.find({flightno:req.body.flightno})
+    .exec()
+    .then(flight=>{
+        if(flight.length>0){
+            res.send("flight already exists").status(400);
+        }
+        else{
+            newFlight.save();
+            res.send("flight added").status(201);
+        }
+    })
+    .catch(next);
 
     
 });
